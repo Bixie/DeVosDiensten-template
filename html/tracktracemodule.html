@@ -1,0 +1,56 @@
+{source}
+<script language="javascript" type="text/javascript">
+    (function ($) {
+        "use strict";
+        $(document).ready(function () {
+            $('#tracktraceform').submit(function (e) {
+                var url, barcode = $('#barcode').val(),
+                        postcode = $('#postcode').val(),
+                        type;
+                type = ['3s', '2s', 'rr'].indexOf(barcode.substr(0, 2).toLowerCase()) !== -1 ? 'postnl' : 'gls';
+                if (type === 'postnl') {
+                    e.preventDefault();
+                    url = 'https://mijnpakket.postnl.nl/Inbox/Search?B=' + barcode + '&P=' + postcode;
+                    window.location.href = url;
+                }
+                if (type === 'gls') {
+                    return true;
+                }
+            });
+        });
+    }(jQuery));
+</script>
+{/source}
+<div class="uk-grid">
+    <div class="uk-width-2-4">
+        <p>Download de MijnPakket App van PostNL om eenvoudig uw pakket te kunnen volgen. De app is beschikbaar voor
+            Android en iOS.</p>
+    </div>
+    <div class="uk-width-2-4">
+        <h4>Track and Trace</h4>
+
+        <p>Of voer hier uw Track and Trace code en postcode in:</p>
+    </div>
+</div>
+<div class="uk-grid">
+    <div class="uk-width-1-4"><br/> <a href="https://itunes.apple.com/nl/app/track-trace/id513218878"
+                                       target="_blank"><img src="images/apple.png" border="0" alt="iOS MijnPakket"
+                                                            style="display: block; margin-left: auto; margin-right: auto;"/></a>
+        <h5 style="text-align: center;">MijnPakket voor iOS</h5>
+    </div>
+    <div class="uk-width-1-4"><br/> <a href="https://play.google.com/store/apps/details?id=nl.tpp.mobile.android"
+                                       target="_blank"><img src="images/google.png" border="0" alt="Android MijnPakket"
+                                                            title="Android MijnPakket"
+                                                            style="display: block; margin-left: auto; margin-right: auto;"/></a>
+        <h5 style="text-align: center;">MijnPakket voor Android</h5>
+    </div>
+    <div class="uk-width-2-4"><br/>
+
+        <form class="uk-form" id="tracktraceform" method="post" action="http://www.gls-info.nl/tracking">
+            <fieldset><input id="barcode" name="ParcelNo" type="text"/> <input id="postcode" name="Zipcode"
+                                                                               type="text"/>
+                <button id="checkcode" class="uk-button" type="submit">Verstuur</button>
+            </fieldset>
+        </form>
+    </div>
+</div>
