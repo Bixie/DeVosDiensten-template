@@ -14,15 +14,16 @@ puphpet/shell/
 node_modules
 uploads
 uploads - kopie
+source
 sql
 profiling/
-
+/pdf
 bixie-devos
 bixie-mailing
 
-default/*
-!default/templates/
-default/templates/*
-!default/templates/yoo_moreno
+html/*
+!html/templates/
+html/templates/*
+!html/templates/yoo_moreno
 
 
