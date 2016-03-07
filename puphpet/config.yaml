@@ -71,7 +71,7 @@ vagrantfile:
                     auto: 'true'
                 owner: www-data
                 group: www-data
-            vflsf_ahnghhffsfh1:
+            vflsf_a46dfff45h1:
                 source: ./bixie-devos/front
                 target: /var/www/html/components/com_bix_devos
                 sync_type: default
