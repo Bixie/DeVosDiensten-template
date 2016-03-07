@@ -54,7 +54,7 @@ vagrantfile:
                 group: www-data
             vflsf_ashdfdhhmsfh9:
                 source: ./bixie-devos/admin
-                target: /var/www/default/administrator/components/com_bix_devos
+                target: /var/www/html/administrator/components/com_bix_devos
                 sync_type: default
                 smb:
                     smb_host: ''
@@ -73,7 +73,7 @@ vagrantfile:
                 group: www-data
             vflsf_ahnghhffsfh1:
                 source: ./bixie-devos/front
-                target: /var/www/default/components/com_bix_devos
+                target: /var/www/html/components/com_bix_devos
                 sync_type: default
                 smb:
                     smb_host: ''
@@ -92,7 +92,7 @@ vagrantfile:
                 group: www-data
             vflsf_asdfsaffsfh9:
                 source: ./bixie-mailing/admin
-                target: /var/www/default/administrator/components/com_bixmailing
+                target: /var/www/html/administrator/components/com_bixmailing
                 sync_type: default
                 smb:
                     smb_host: ''
@@ -111,7 +111,7 @@ vagrantfile:
                 group: www-data
             vflsf_ahnghhffsfh1:
                 source: ./bixie-mailing/front
-                target: /var/www/default/components/com_bixmailing
+                target: /var/www/html/components/com_bixmailing
                 sync_type: default
                 smb:
                     smb_host: ''
@@ -130,7 +130,7 @@ vagrantfile:
                 group: www-data
             vflsf_ahdfsshfhtsh5:
                 source: ./bixie-mailing/plugins/system/bixsystem
-                target: /var/www/default/plugins/system/bixsystem
+                target: /var/www/html/plugins/system/bixsystem
                 sync_type: default
                 smb:
                     smb_host: ''
@@ -149,7 +149,7 @@ vagrantfile:
                 group: www-data
             vflsf_axcbdfhghgfs4:
                 source: ./bixie-mailing/plugins/user/profile_vos
-                target: /var/www/default/plugins/user/profile_vos
+                target: /var/www/html/plugins/user/profile_vos
                 sync_type: default
                 smb:
                     smb_host: ''
@@ -277,7 +277,7 @@ apache:
             servername: devos.dev
             serveraliases:
                 - www.devos.dev
-            docroot: /var/www/default
+            docroot: /var/www/html
             port: '80'
             setenv:
                 - 'APP_ENV dev'
@@ -291,7 +291,7 @@ apache:
             ssl_cipher: ''
             directories:
                 avd_58xol6x66esp:
-                    path: /var/www/default
+                    path: /var/www/html
                     options:
                         - Indexes
                         - FollowSymlinks
