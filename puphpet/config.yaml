@@ -71,6 +71,25 @@ vagrantfile:
                     auto: 'true'
                 owner: www-data
                 group: www-data
+            vflsf_a34dsfhf45h2:
+                source: ./bixie-devos-client
+                target: /var/www/html/client
+                sync_type: default
+                smb:
+                    smb_host: ''
+                    smb_username: ''
+                    smb_password: ''
+                rsync:
+                    args:
+                        - '--verbose'
+                        - '--archive'
+                        - '-z'
+                    exclude:
+                        - .vagrant/
+                        - .git/
+                    auto: 'true'
+                owner: www-data
+                group: www-data
             vflsf_a46dfff45h1:
                 source: ./bixie-devos/front
                 target: /var/www/html/components/com_bix_devos
@@ -343,15 +362,17 @@ php:
 xdebug:
     install: '1'
     settings:
-        xdebug.default_enable: '1'
+        xdebug.default_enable: '0'
         xdebug.remote_autostart: '0'
-        xdebug.remote_connect_back: '1'
+        xdebug.remote_connect_back: '0'
         xdebug.remote_enable: '1'
         xdebug.remote_handler: dbgp
+        xdebug.remote_host: 192.168.56.1
         xdebug.remote_port: '9010'
         xdebug.idekey: PHPSTORM
         xdebug.profiler_output_dir: /var/www/profiling
         xdebug.profiler_output_name: cachegrind.out.%p
+        xdebug.file_link_format: 'phpstorm://open?file=%f&line=%l'
 blackfire:
     install: '0'
     settings:

@@ -3,7 +3,7 @@
 sql_exportfile='devos.sql'
 dev_db='devos'
 dev_db_user='devos'
-dev_db_pwd='plop0999'
+dev_db_pwd='devos'
 
 
 
@@ -43,5 +43,5 @@ function ask {
 # Make sure this isn't run accidentally
 ask 'Database dumpen??' Y || exit
 
-mysqldump --opt -u $dev_db_user -p$dev_db_pwd $dev_db > /vagrant/sql/$sql_exportfile || exit
+mysqldump --opt -d -u $dev_db_user -p$dev_db_pwd $dev_db devos_dv_shipment_gls > /vagrant/sql/$sql_exportfile || exit
 echo "Database geexporteerd."
