@@ -13,12 +13,12 @@ puphpet/shell/
 node_modules
 uploads
 uploads - kopie
-source
-sql
-profiling/
+/sql
+/profiling/
 /pdf
-bixie-devos
-bixie-mailing
+/bixie-devos-client
+/bixie-devos
+/bixie-mailing
 
 html/*
 !html/templates/
