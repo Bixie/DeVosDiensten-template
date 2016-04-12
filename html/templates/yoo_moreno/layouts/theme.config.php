@@ -114,6 +114,8 @@ if (!JFactory::getApplication()->get('uikit', false)) {
 	$this['asset']->addFile('js', 'warp:vendor/uikit/js/components/notify.js');
 }
 $this['asset']->addFile('js', 'warp:vendor/uikit/js/components/sticky.js');
+$this['asset']->addFile('js', 'warp:vendor/uikit/js/components/form-select.js');
+$this['asset']->addFile('js', 'warp:vendor/uikit/js/components/upload.js');
 $this['asset']->addFile('js', 'js:social.js');
 $this['asset']->addFile('js', 'js:theme.js');
 $this['asset']->addFile('js', 'js:masonry.js');
