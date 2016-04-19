@@ -82,8 +82,22 @@ class Navbar
             }
         }
 
+        // dropdown settings
+        $dropdown = str_replace('"', '\'', json_encode(array_merge(
+            array("preventflip" => "y"),
+            isset($module->nav_settings['dropdown']) ? (array)$module->nav_settings['dropdown'] : array()
+        )));
+
+
         foreach ($element->find('li.level1') as $li) {
-            $li->attr("data-uk-dropdown", "{}");
+            // add attributes, if element has dropdown
+            if ($li->children('div.uk-dropdown')->length) {
+
+                $li->attr("data-uk-dropdown", $dropdown);
+
+                $li->attr("aria-haspopup", "true");
+                $li->attr("aria-expanded", "false");
+            }
 
             if ($li->attr('data-menu-subtitle')) {
                 $li->first("a")->addClass('uk-navbar-nav-subtitle');

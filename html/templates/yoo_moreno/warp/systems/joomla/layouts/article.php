@@ -56,11 +56,9 @@
 	<?php endif; ?>
 
 	<?php echo $hook_beforearticle; ?>
-	
+
 	<?php if ($article) : ?>
-	<div>
 		<?php echo $article; ?>
-	</div>
 	<?php endif; ?>
 
 	<?php if ($tags) : ?>
@@ -77,19 +75,37 @@
 	<p><?php echo $edit; ?></p>
 	<?php endif; ?>
 
+	<?php if ($this['config']->get('article_meta', false) && ($date_published || $date_modified || $hits)) : ?>
+	<?php
+		$date_published = ($date_published) ? JHtml::_('date', $date_published, JText::_('DATE_FORMAT_LC3')) : '';
+		$date_modified = ($date_modified) ? JHtml::_('date', $date_modified, JText::_('DATE_FORMAT_LC3')) : '';
+	?>
+	<ul class="uk-list">
+		<?php if ($date_published) : ?>
+			<li><?php printf(JText::_('COM_CONTENT_PUBLISHED_DATE_ON'), $date_published); ?></li>
+		<?php endif; ?>
+
+		<?php if ($date_modified) : ?>
+			<li><?php printf(JText::_('COM_CONTENT_LAST_UPDATED'), $date_modified); ?></li>
+		<?php endif; ?>
+
+		<?php if ($hits) : ?>
+			<li><?php printf(JText::_('COM_CONTENT_ARTICLE_HITS'), $hits); ?></li>
+		<?php endif; ?>
+	</ul>
+	<?php endif; ?>
+
 	<?php if ($previous || $next) : ?>
 	<ul class="uk-pagination">
 		<?php if ($previous) : ?>
 		<li class="uk-pagination-previous">
-			<?php echo $previous; ?>
-			<i class="uk-icon-angle-double-left"></i>
+			<a href="<?php echo $previous; ?>"><i class="uk-icon-angle-double-left"></i> <?php echo JText::_('JPREV'); ?></a>
 		</li>
 		<?php endif; ?>
 
 		<?php if ($next) : ?>
 		<li class="uk-pagination-next">
-			<?php echo $next; ?>
-			<i class="uk-icon-angle-double-right"></i>
+			<a href="<?php echo $next; ?>"><?php echo JText::_('JNEXT'); ?> <i class="uk-icon-angle-double-right"></i></a>
 		</li>
 		<?php endif; ?>
 	</ul>

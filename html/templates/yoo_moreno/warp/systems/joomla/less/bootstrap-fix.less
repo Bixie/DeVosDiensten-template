@@ -1,4 +1,4 @@
-// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+// Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
 
 /* ========================================================================
    Name:            Bootstrap fix
@@ -21,6 +21,11 @@ ul.unstyled, ol.unstyled,
 .list-striped, .list-condensed,
 .nav:not(.nav-list),
 .pager, .pagination ul { padding-left: 0; }
+
+
+/* Fix text-rendering property in headings
+========================================================================== */
+h1, h2, h3, h4, h5, h6 { text-rendering: auto; }
 
 
 /* Fixes UIkit defacement caused by Bootstrap
@@ -120,6 +125,13 @@ iframe { max-width: none; }
 
 .uk-form input[type="radio"],
 .uk-form input[type="checkbox"] { vertical-align: baseline; }
+
+/*
+ * Utility
+ */
+
+.uk-link-reset:focus,
+.uk-link-reset a:focus { text-decoration: none; }
 
 /*
  * Search

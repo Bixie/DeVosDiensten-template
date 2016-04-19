@@ -1,5 +1,15 @@
 # Changelog
 
+	1.0.14
+	^ Updated UIkit theme according to UIkit 2.20.0
+	# Fixed Article Navigation (J)
+
+	1.0.13
+	^ Updated UIkit theme according to UIkit 2.17.0
+
+	1.0.12
+	^ Updated UIkit theme according to UIkit 2.16.0
+
 	1.0.11
 	^ Updated UIkit theme according to UIkit 2.15.0
 

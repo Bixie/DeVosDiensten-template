@@ -7,26 +7,19 @@
 
 @icon-font-path: "../../fonts";
 
-// Components: Layout
-@import "../../warp/vendor/uikit/less/components/flex.less";
-@import "../../warp/vendor/uikit/less/components/cover.less";
-
 // Components: Navs
 @import "../../warp/vendor/uikit/less/components/dotnav.less";
 @import "../../warp/vendor/uikit/less/components/slidenav.less";
 
 // Components: Common
-@import "../../warp/vendor/uikit/less/components/caption.less";
-@import "../../warp/vendor/uikit/less/components/sticky.less";
+@import "../../warp/vendor/uikit/less/components/progress.less";
 
 // Components: JavaScript
+@import "../../warp/vendor/uikit/less/components/accordion.less";
+@import "../../warp/vendor/uikit/less/components/slider.less";
 @import "../../warp/vendor/uikit/less/components/slideshow.less";
 @import "../../warp/vendor/uikit/less/components/search.less";
-@import "../../warp/vendor/uikit/less/components/form-select.less";
-@import "../../warp/vendor/uikit/less/components/form-advanced.less";
-@import "../../warp/vendor/uikit/less/components/form-file.less";
-@import "../../warp/vendor/uikit/less/components/upload.less";
-@import "../../warp/vendor/uikit/less/components/placeholder.less";
+@import "../../warp/vendor/uikit/less/components/tooltip.less";
 
 
 // Theme
@@ -41,6 +34,7 @@
 // Layout
 @import "grid.less";
 @import "panel.less";
+@import "block.less";
 @import "article.less";
 @import "comment.less";
 
@@ -51,6 +45,7 @@
 @import "breadcrumb.less";
 @import "pagination.less";
 @import "tab.less";
+@import "thumbnav.less";
 
 // Elements
 @import "list.less";
@@ -74,17 +69,15 @@
 @import "offcanvas.less";
 @import "tooltip.less";
 
-// Need to be loaded last
-@import "text.less";
-@import "utility.less";
-
 // Components: Navs
 @import "dotnav.less";
 @import "slidenav.less";
 
-// Components: Common
-@import "caption.less";
-
 // Components: JavaScript
+@import "accordion.less";
 @import "search.less";
-@import "placeholder.less";
+
+// Need to be loaded last
+@import "text.less";
+@import "utility.less";
+@import "contrast.less";

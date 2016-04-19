@@ -51,7 +51,7 @@ class Pre
 			}
 
 			// set current and active
-			if ($li->hasClass('active')) {
+			if ($li->hasClass('active') || $li->hasClass('current')) {
 				$li->attr('data-menu-active', $li->hasClass('current') == 'current' ? 2 : 1);
 			}
 
@@ -86,7 +86,8 @@ class Pre
 
 				if($span->hasClass("nav-header")) $type = "header";
 				if($span->hasClass("separator")) {
-					$type = $span->text()=="-" ? "separator" : "header";
+					$isline = preg_match("/^\s*\-+\s*$/", $span->text());
+					$type = $isline ? "separator-line" : "separator-text";
 				}
 
 				if($type) {

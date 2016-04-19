@@ -59,21 +59,18 @@ $positions = array_keys($config->get('grid', array()));
 $displays = array('small', 'medium', 'large');
 $grid_classes = array();
 foreach ($positions as $position) {
-	$grid_classes[$position] = array();
-	$grid_classes[$position][] = "tm-{$position} uk-grid";
-	if ($this['config']->get("grid.{$position}.divider", false)) {
-		$grid_classes[$position][] = 'uk-grid-divider';
-	}
-	$widgets = $this['widgets']->load($position);
-	foreach ($displays as $display) {
-		if (!array_filter($widgets, function ($widget) use ($config, $display) {
-			return (bool)$config->get("widgets.{$widget->id}.display.{$display}", true);
-		})
-		) {
-			$grid_classes[$position][] = "uk-hidden-{$display}";
-		}
-	}
-	$grid_classes[$position] = implode(" ", $grid_classes[$position]);
+    $grid_classes[$position] = array();
+    $grid_classes[$position][] = "tm-{$position} uk-grid";
+    if ($this['config']->get("grid.{$position}.divider", false)) {
+        $grid_classes[$position][] = 'uk-grid-divider';
+    }
+    $widgets = $this['widgets']->load($position);
+    foreach($displays as $display) {
+        if (!array_filter($widgets, function($widget) use ($config, $display) { return (bool) $config->get("widgets.{$widget->id}.display.{$display}", true); })) {
+            $grid_classes[$position][] = "uk-hidden-{$display}";
+        }
+    }
+    $grid_classes[$position] = implode(" ", $grid_classes[$position]);
 }
 
 /*

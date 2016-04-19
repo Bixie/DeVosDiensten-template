@@ -19,7 +19,7 @@ $app = JFactory::getApplication();
 $app->input->set('layout', 'blog');
 ?>
 
-<?php if ($this->params->get('show_page_heading') || $this->params->get('page_subheading') || $this->params->get('show_description', 1) || $this->params->def('show_description_image', 1)) : ?>
+<?php if ($this->params->get('show_page_heading') || $this->params->get('page_subheading') || $this->params->get('show_description', 1) || $this->params->def('show_description_image', 1) || $this->params->get('show_category_title', 1)) : ?>
 <div class="uk-grid">
 	<div class="uk-width-1-1">
 		<div class="uk-panel uk-panel-header">
@@ -90,17 +90,19 @@ if (!empty($this->lead_items)) {
 }
 
 // intro articles
-$columns = array();
-$i       = 0;
+$num_columns = $this->params->get('num_columns', 2);
+$columns 	 = array();
+$i = 0;
 
 foreach ($this->intro_items as $item) {
-	$column = $i++ % $this->params->get('num_columns', 2);
+	$column = $i++ % $num_columns;
 
 	if (!isset($columns[$column])) {
 		$columns[$column] = '';
 	}
 
 	$this->item = $item;
+	$this->item->is_column_item = ($num_columns > 1);
 	$columns[$column] .= $this->loadTemplate('item');
 }
 

@@ -33,8 +33,6 @@ $this->setHeadData($head);
 <head>
 	<meta charset="<?php echo $this->getCharset(); ?>">
 	<jdoc:include type="head" />
-	<link rel="stylesheet" href="/templates/yoo_moreno/styles/DeVosTemplate/css/theme.css">
-	<link rel="stylesheet" href="/templates/yoo_moreno/css/custom.css">
 </head>
 <body class="contentpane">
 	<jdoc:include type="message" />
