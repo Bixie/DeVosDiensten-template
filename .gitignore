@@ -23,6 +23,26 @@ uploads - kopie
 /bixie-mailing
 
 html/*
+!html/administrator/
+html/administrator/*
+!html/administrator/components/
+html/administrator/components/*
+!html/administrator/components/com_widgetkit/
+html/administrator/components/com_widgetkit/*
+!html/administrator/components/com_widgetkit/vendor
+html/administrator/components/com_widgetkit/vendor/*
+!html/administrator/components/com_widgetkit/vendor/yootheme
+html/administrator/components/com_widgetkit/vendor/yootheme/*
+!html/administrator/components/com_widgetkit/vendor/yootheme/framework
+html/administrator/components/com_widgetkit/vendor/yootheme/framework/*
+!html/administrator/components/com_widgetkit/vendor/yootheme/framework/plugins
+html/administrator/components/com_widgetkit/vendor/yootheme/framework/plugins/*
+!html/administrator/components/com_widgetkit/vendor/yootheme/framework/plugins/joomla
+html/administrator/components/com_widgetkit/vendor/yootheme/framework/plugins/joomla/*
+!html/administrator/components/com_widgetkit/vendor/yootheme/framework/plugins/joomla/src
+html/administrator/components/com_widgetkit/vendor/yootheme/framework/plugins/joomla/src/*
+!html/administrator/components/com_widgetkit/vendor/yootheme/framework/plugins/joomla/src/JoomlaPlugin.php
+
 !html/templates/
 html/templates/*
 !html/templates/yoo_moreno
