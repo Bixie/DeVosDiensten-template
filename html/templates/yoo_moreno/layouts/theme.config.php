@@ -106,14 +106,16 @@ $this['asset']->addFile('css', 'css:theme.css');
 $this['asset']->addFile('css', 'css:custom.css');
 
 // add scripts
-if (!JFactory::getApplication()->get('uikit', false)) {
-	$this['asset']->addFile('js', 'js:uikit.js');
-	$this['asset']->addFile('js', 'warp:vendor/uikit/js/components/notify.js');
-}
-$this['asset']->addFile('js', 'warp:vendor/uikit/js/components/sticky.js');
-$this['asset']->addFile('js', 'warp:vendor/uikit/js/components/form-select.js');
-$this['asset']->addFile('js', 'warp:vendor/uikit/js/components/upload.js');
-$this['asset']->addFile('js', 'warp:vendor/uikit/js/components/lightbox.js');
+//$this['asset']->addFile('js', 'js:uikit.js');
+//$this['asset']->addFile('js', 'warp:vendor/uikit/js/components/notify.js');
+//$this['asset']->addFile('js', 'warp:vendor/uikit/js/components/sticky.js');
+//$this['asset']->addFile('js', 'warp:vendor/uikit/js/components/form-select.js');
+//$this['asset']->addFile('js', 'warp:vendor/uikit/js/components/upload.js');
+//$this['asset']->addFile('js', 'warp:vendor/uikit/js/components/lightbox.js');
+//$this['asset']->addFile('js', 'warp:vendor/uikit/js/components/slideset.js');
+//$this['asset']->addFile('js', 'warp:vendor/uikit/js/components/slider.js');
+//$this['asset']->addFile('js', 'warp:vendor/uikit/js/components/slideshow.js');
+//$this['asset']->addFile('js', 'warp:vendor/uikit/js/components/tooltip.js');
 $this['asset']->addFile('js', 'js:social.js');
 $this['asset']->addFile('js', 'js:theme.js');
 $this['asset']->addFile('js', 'js:masonry.js');
