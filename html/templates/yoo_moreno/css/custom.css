@@ -99,3 +99,8 @@
 .uk-text-info {
     color: #5fade1 !important;
 }
+
+#jform_contact_message {  
+	width: auto;  
+	height: 200px;  
+}
