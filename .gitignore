@@ -1,20 +1,8 @@
 .idea
 
-.vagrant
-Vagrantfile
-puphpet.zip
-puphpet/files
-puphpet/files/*/empty
-puphpet/files/dot/ssh
-puphpet/ruby/
-puphpet/vagrant/
-puphpet/puppet/
-puphpet/shell/
 node_modules
 uploads
-uploads - kopie
 /sql
-/profiling/
 /pdf
 /xml
 /logs

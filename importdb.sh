@@ -1,9 +1,9 @@
 #!/bin/bash
 
-sql_importfile='devos.sql'
+sql_importfile='devos_dienew.sql'
 dev_db='devos'
 dev_db_user='devos'
-dev_db_pwd='plop0999'
+dev_db_pwd='devos'
 
 
 
